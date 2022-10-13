@@ -58,6 +58,7 @@ input::placeholder{
     font-size: 1.5rem;
 }
 
+
 .sizeInput{
     width: 32%;
 }
@@ -89,4 +90,12 @@ input::placeholder{
 
 .widthPalabralarga{
     width:5em ;
+}
+
+.fondoTotal{
+    background-color: #C0EAEA;
+}
+
+#total{
+    color:#356BBB;
 }

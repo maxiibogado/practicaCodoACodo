@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Proyecto Integrador codo a codo</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <img src="../assets/icons/codoacodo.png" alt="logo codo a codo"  height="50px" class="d-inline-block align-text-top">
+            <span class="text-white fs-3">Conf Bs As</span>     
+          <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+            <ul class="navbar-nav fs-4">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html">La conferencia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">Los oradores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">El lugar y la fecha</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./pages/convierteteEnOrador.html">Conviértete en orador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success active fw-bold" href="#">Comprar tickets</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  </nav>
+     <main class="container">
+        <div class="d-flex justify-content-center gap-3 text-center mt-5">
+            <div class="border  border-info p-4 ">
+                <h3>Estudiante</h3>
+                <p class="fs-4">Tienen un descuento</p>
+                <p class="fw-bold fs-4">80%</p>
+                <p class="fs-5"> * presentar documentación</p>
+            </div>
+            <div class="border  border-info p-4 ">
+                <h3>Trainee</h3>
+                <p class="fs-4">Tienen un descuento</p>
+                <p class="fw-bold fs-4">50%</p>
+                <p class="fs-5 fw-light"> * presentar documentación</p>
+            </div>
+            <div class="border  border-warning p-4">
+                <h3>Junior</h3>
+                <p class="fs-4">Tienen un descuento</p>
+                <p class="fw-bold fs-4">15%</p>
+                <p class="fs-5 fw-light"> * presentar documentación</p>
+            </div>
+        </div>
+        <p class="text-center fs-5 mt-2 mb-0">VENTA</p>
+        <p class="text-center fs-1">VALOR DE TICKET $200</p>
+        
+        <form action="">
+        
+        <div class="row g-3 justify-content-center ">
+            <div class="w-25 input-group-lg">
+              <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="nombre">
+            </div>
+            <div class="w-25 input-group-lg">
+              <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" id="apellido">
+            </div>
+        </div>    
+        
+        <div class="row g-3 justify-content-center mt-2">
+            <div class="w-50 input-group-lg">
+              <input type="email" class="form-control" placeholder="Correo" aria-label="Correo" id="email">
+            </div>    
+        </div>
+        <div class="row g-3 justify-content-center mt-2">
+            <div class="w-25 input-group-lg">
+              <label for="cantidad" class="form-label fs-4">Cantidad</label>
+              <input type="number" class="form-control" id="cantidad" placeholder="cantidad" id="cantidad">
+            </div> 
+            <div class="w-25 input-group-lg">
+                <label for="cantidad" class="form-label fs-4">Categoria</label>
+
+                <select class="form-select" aria-label="Default select example" id="categoria">
+                    <option selected>Estudiante</option>
+                    <option value="1">Trainee</option>
+                    <option value="2">Junior</option>
+                  </select>
+            </div> 
+               
+        </div>
+        <div class="row g-3 justify-content-center mt-2 ">
+            <div class="w-50 fondoTotal">
+                <p class="p-3 mb-0 fs-4" id="total">Total a Pagar: $</p>
+            </div>               
+        </div>
+
+        <div class="d-flex gap-2 justify-content-center mt-5 mb-4">
+          <button class="btn btn-success w-25 btn-lg" type="reset">Borrar</button>
+          <button class="btn btn-success w-25 btn-lg" type="button" id="resumen">Resumen</button>
+        </div>
+    
+      </form>
+     
+    
+
+
+
+
+        
+       
+        
+
+    </main> 
+   
+    <footer class="container-fluid me-0 ms-0 ps-0 pe-0 ">
+            <ul class="navbar d-flex justify-content-center align-items-center flex-row fs-5 estiloul mb-0 text-white">
+              <li class="nav-item  widthPalabralarga">Preguntas frecuentes</li>
+              <li class="nav-item ">Contáctanos</li>
+              <li class="nav-item ">Prensa</li>
+              <li class="nav-item ">Conferencias</li>
+              <li class="nav-item  widthPalabralarga">Términos y condiciones</li>
+              <li class="nav-item ">Privacidad</li>
+              <li class="nav-item ">Estudiantes</li>
+            </ul>
+     </footer>
+    <script src="../js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

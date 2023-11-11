@@ -6,9 +6,20 @@ const placeholderNombre = document.querySelector("#nombre").placeholder;
 const placeholderApellido = document.querySelector("#apellido").placeholder;
 const placeholderEmail = document.querySelector("#email").placeholder;
 
+const valorTicket = 200;
+const porcentajeDescuentoEstudiante = 0.20;
+const porcentajeDescuentoTrainee = 0.50;
+const porcentajeDescuentoJunior = 0.85;
+
 
 const btnResumenFormulario = document.querySelector("#resumen");
-btnResumenFormulario &&  btnResumenFormulario.addEventListener("click", resumenFormulario);
+btnResumenFormulario &&  btnResumenFormulario.addEventListener("click", 
+(evento) => {console.log(evento);
+  let eventtito = evento;
+  evento.preventDefault();
+resumenFormulario()});
+
+
 
 
 
@@ -42,7 +53,7 @@ function validarNombreApellido(dato,nombreDato) {
     if (dato.length < 2) {
       warning = `${nombreDato.toUpperCase()} NO VÁLIDO. Ingrese el dato.`
       entrar = true;
-      modificarInput(nombreDato);
+  //    modificarInput(nombreDato);
       return;
     }
     ingresarClaseInputOriginal(nombreDato);
@@ -110,10 +121,28 @@ function validarNombreApellido(dato,nombreDato) {
     const apellidoCliente = document.getElementById('apellido').value;
     const cantidadDelCLiente = document.getElementById('cantidad').value;
     const categoriaCliente = document.getElementById('categoria').value;
-    console.log(nombreCliente,apellidoCliente,cantidadDelCLiente,categoriaCliente);
+    
+    let importeTotal = calcularImporte(cantidadDelCLiente,categoriaCliente);
+
+    let totalAPagar = document.getElementById('total')
+    totalAPagar.textContent = 'Total a Pagar: $' + importeTotal;
+
+    console.log(nombreCliente,apellidoCliente,cantidadDelCLiente,categoriaCliente,totalAPagar);
 
     validarNombreApellido(nombreCliente,"nombre");
 
     validarNombreApellido(apellidoCliente,"apellido")
-
+    
   }
+
+  function calcularImporte(cantidad,categoria) {
+    if (categoria === "Estudiante") {
+      return porcentajeDescuentoEstudiante * (cantidad * valorTicket)
+    } else if (categoria === "Trainee"){
+      return porcentajeDescuentoTrainee * cantidad * valorTicket
+    } else {
+      return porcentajeDescuentoJunior * cantidad * valorTicket
+    }
+  }
+
+
